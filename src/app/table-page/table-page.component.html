@@ -1,0 +1,12 @@
+<h2 class="text-center">Table</h2>
+<table class="table table-hover p-3">
+  <tbody>
+    <tr *ngFor="let data of tableData" (click)="edit(data)">
+      <th *ngFor="let key of data.keys"> {{ data.value[key] }}</th>
+    </tr>
+  </tbody>
+</table>
+
+<div class="text-end m-3">
+  <button (click)="exportTableData()" type="button" class="btn btn-primary">Выгрузить</button>
+</div>
